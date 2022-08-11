@@ -1,16 +1,16 @@
 import React from 'react';
 
 const Navbar = () => {
+  const navbarContent = ['О нас', 'Проживание', 'Галерея', 'Спецпредложения', 'Отзывы', 'Расположение', 'Контакты']
+
   return (
-    <div className='w-full h-16 lg:h-20 p-2 lg:p-3 flex justify-center items-center bg-neutral-300'>
-      <div className='w-full h-full p-2 max-w-screen-2xl bg-neutral-400 grid grid-cols-7 gap-4'>
-        <div className='w-full h-full bg-neutral-500'></div>
-        <div className='w-full h-full bg-neutral-500'></div>
-        <div className='w-full h-full bg-neutral-500'></div>
-        <div className='w-full h-full bg-neutral-500'></div>
-        <div className='w-full h-full bg-neutral-500'></div>
-        <div className='w-full h-full bg-neutral-500'></div>
-        <div className='w-full h-full bg-neutral-500'></div>
+    <div className='w-full h-12 xl:h-16 p-1 lg:p-3 flex justify-center items-center shadow-lg'>
+      <div className='w-full h-full p-1 max-w-screen-2xl flex justify-between items-center'>
+        {navbarContent.map((item, key) => (
+          <div key={key} className='flex justify-center items-center'>
+            <p className='text-lg font-serif font-semibold hover:text-green-500 duration-100 cursor-pointer'>{item}</p>
+          </div>
+        ))}
       </div>
     </div>
   )
