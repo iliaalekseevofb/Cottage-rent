@@ -37,7 +37,7 @@ const ImageSlider = () => {
       <ButtonSlider moveSlide={nextSlide} direction={'next'} />
       <ButtonSlider moveSlide={prevSlide} direction={'prev'} />
       <div className='container-dots'>
-        {Array.from({length: 7}).map((item, index) => (
+        {Array.from({length: 9}).map((item, index) => (
           <div onClick={() => {moveDot(index + 1)}} className={slideIndex === index + 1 ? 'dot active cursor-pointer' : 'dot cursor-pointer'}></div>
         ))}
       </div>
