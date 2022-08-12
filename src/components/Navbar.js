@@ -16,7 +16,9 @@ const Navbar = () => {
       <div className='w-full h-full p-1 max-w-screen-2xl flex justify-between items-center'>
         {navbarContent.map((item, key) => (
           <div key={key} className='flex justify-center items-center'>
-            <a href={item[1]} className='text-lg font-serif font-semibold hover:text-green-600 duration-100 cursor-pointer'>{item[0]}</a>
+            <a href={item[1]} className='text-lg font-serif font-semibold hover:text-green-600 duration-100 cursor-pointer'>
+              {item[0]}
+            </a>
           </div>
         ))}
       </div>
