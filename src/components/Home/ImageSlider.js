@@ -36,11 +36,11 @@ const ImageSlider = () => {
           </div>
         )
       })}
-      <button onClick={nextSlide} className='w-[60px] h-[60px] absolute z-20 flex justify-center items-center rounded-[50%] border-2 border-white text-white cursor-pointer top-[50%] right-[20px] -translate-y-[60%] hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
-          <BiRightArrow size={28} />
+      <button onClick={nextSlide} className='w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] absolute z-20 flex justify-center items-center rounded-[50%] border-2 border-white text-white cursor-pointer top-[50%] right-[10px] lg:right-[20px] -translate-y-[60%] hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
+          <BiRightArrow size={24} />
       </button>
-      <button onClick={prevSlide} className='w-[60px] h-[60px] absolute z-20 flex justify-center items-center rounded-[50%] border-2 border-white text-white cursor-pointer top-[50%] left-[20px] -translate-y-[60%] hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
-          <BiLeftArrow size={28} />
+      <button onClick={prevSlide} className='w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] absolute z-20 flex justify-center items-center rounded-[50%] border-2 border-white text-white cursor-pointer top-[50%] left-[10px] lg:left-[20px] -translate-y-[60%] hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
+          <BiLeftArrow size={24} />
       </button>
       <div className='absolute flex z-20 bottom-[10px] left-[50%] -translate-x-[50%]'>
         {Array.from({length: 9}).map((item, index) => (
