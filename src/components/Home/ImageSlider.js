@@ -45,11 +45,11 @@ const ImageSlider = () => {
     <div className='w-full h-[30vh] sm:h-[40vh] lg:h-[440px] xl:h-[580px] relative overflow-hidden border-b-4 border-green-700'>
       {sources.map((item, index) => {
         return (
-          <div>
-            <div key={index} className={`${slideIndex === index + 1 ? 'opacity-100' : 'opacity-0'} w-full h-full absolute z-10 transition-opacity ease-in-out duration-300`}>
+          <div key={index}>
+            <div className={`${slideIndex === index + 1 ? 'opacity-100' : 'opacity-0'} w-full h-full absolute z-10 transition-opacity ease-in-out duration-300`}>
               <img className = 'w-full h-full object-cover brightness-50' src={item} alt='...' />
             </div>
-            <h1 key={index} className='absolute z-20 top-[25%] left-[15%] text-white font-sans text-5xl font-semibold'>{headers[slideIndex-1]}</h1>
+            <h1 className='absolute z-20 top-[25%] left-[15%] text-white font-sans text-5xl font-semibold'>{headers[slideIndex-1]}</h1>
             <h3 className='absolute z-20 top-[40%] left-[15%] w-[580px] text-white font-serif text-2xl'>{texts[slideIndex-1]}</h3>
           </div>
         )
