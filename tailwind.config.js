@@ -6,6 +6,11 @@ module.exports = {
     fontFamily: {
       'sans': ['"Roboto Slab"', 'sans'],
       'serif': ['Montserrat', 'serif']
+    },
+    extend: {
+      colors: {
+        'myGradient': 'rgba(0, 0, 0, 0.4)',
+      }
     }
   },
   plugins: [],

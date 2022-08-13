@@ -30,7 +30,7 @@ const InfoBar = () => {
 
   const DropdownMenu = () => {
     return (
-      <div className={`absolute ${toggleMenu ? 'block' : 'hidden'} lg:hidden top-20 sm:top-24 right-0 left-0 bg-white`}>
+      <div className={`absolute z-30 ${toggleMenu ? 'block' : 'hidden'} lg:hidden top-20 sm:top-24 right-0 left-0 bg-white`}>
         <a href='#contacts' onClick={() => {setToggleMenu(false)}} className='h-16 px-5 flex justify-start items-center border-b border-b-neutral-200'>
           <BsFillTelephoneFill size={24} className='text-green-700 mr-2'/>
           <div className='font-serif'>

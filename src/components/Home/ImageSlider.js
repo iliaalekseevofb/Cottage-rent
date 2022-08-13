@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { defleurMagali, erikMclean, kennyTimmer1, kennyTimmer2, louisRenaudineau, lucaBravo, matthewHarwood, simonWaelti, stephenWheeler } from '../../assets';
 import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
-import './ImageSlider.css';
 
-const sources = [kennyTimmer1, erikMclean, defleurMagali, kennyTimmer2, louisRenaudineau, lucaBravo, matthewHarwood, simonWaelti, stephenWheeler];
+const sources = [stephenWheeler, kennyTimmer1, erikMclean, defleurMagali, kennyTimmer2, louisRenaudineau, lucaBravo, matthewHarwood, simonWaelti];
 
 const ImageSlider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -29,23 +28,23 @@ const ImageSlider = () => {
   }
 
   return (
-    <div className='container-slider'>
+    <div className='w-full h-[30vh] sm:h-[40vh] lg:h-[440px] xl:h-[580px] relative overflow-hidden border-b-4 border-green-700'>
       {sources.map((item, index) => {
         return (
-        <div key={index} className={slideIndex === index + 1 ? 'slide active-anim' : 'slide'}>
-            <img src={item} alt='...' />
+          <div key={index} className={`${slideIndex === index + 1 ? 'opacity-100' : 'opacity-0'} w-full h-full absolute z-10 transition-opacity ease-in-out duration-500`}>
+            <img className = 'w-full h-full object-cover' src={item} alt='...' />
           </div>
         )
       })}
-      <button onClick={nextSlide} className='btn-slide next'>
-          <BiRightArrow />
+      <button onClick={nextSlide} className='w-[60px] h-[60px] absolute z-20 flex justify-center items-center rounded-[50%] border-2 border-white text-white cursor-pointer top-[50%] right-[20px] -translate-y-[60%] hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
+          <BiRightArrow size={28} />
       </button>
-      <button onClick={prevSlide} className='btn-slide prev'>
-          <BiLeftArrow />
+      <button onClick={prevSlide} className='w-[60px] h-[60px] absolute z-20 flex justify-center items-center rounded-[50%] border-2 border-white text-white cursor-pointer top-[50%] left-[20px] -translate-y-[60%] hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
+          <BiLeftArrow size={28} />
       </button>
-      <div className='container-dots'>
+      <div className='absolute flex z-20 bottom-[10px] left-[50%] -translate-x-[50%]'>
         {Array.from({length: 9}).map((item, index) => (
-          <div onClick={() => {moveDot(index + 1)}} className={slideIndex === index + 1 ? 'dot active cursor-pointer' : 'dot cursor-pointer'}></div>
+          <div key={index} onClick={() => {moveDot(index + 1)}} className={slideIndex === index + 1 ? 'bg-white w-[15px] h-[15px] rounded-[50%] border-2 border-white mx-[5px] cursor-pointer' : 'w-[15px] h-[15px] rounded-[50%] border-2 border-white mx-[5px] cursor-pointer'}></div>
         ))}
       </div>
     </div>
