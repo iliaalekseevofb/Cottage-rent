@@ -55,8 +55,8 @@ const InfoBar = () => {
         {/* Logo */}
         <Link to='/'>
           <div className='flex justify-center items-start flex-col'>
-            <h1 className='text-xl sm:text-3xl text-green-900 leading-normal font-sans font-bold'>Домик "У Барта"</h1>
-            <p className='text-md sm:text-xl leading-normal font-serif'>Живите в 7 минутах от моря</p>
+            <h1 className='text-xl sm:text-3xl leading-normal font-sans font-bold'>Домик "У Барта"</h1>
+            <p className='text-md sm:text-xl text-green-800 leading-normal font-serif'>Живите в 7 минутах от моря</p>
           </div>
         </Link>
         <div className='flex justify-end items-center'>

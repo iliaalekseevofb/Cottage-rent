@@ -9,7 +9,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'myGradient': 'rgba(0, 0, 0, 0.4)',
+        'myGradient': 'rgba(0, 0, 0, 0.2)',
       }
     }
   },
