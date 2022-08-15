@@ -43,7 +43,7 @@ const ImageSlider = () => {
   }
 
   return (
-    <div className='w-full h-[30vh] sm:h-[40vh] lg:h-[440px] xl:h-[600px] relative overflow-hidden border-b-4 border-green-700'>
+    <div className='w-full h-[200px] esm:h-[300px] sm:h-[400px] xl:h-[600px] relative overflow-hidden border-b-4 border-green-700'>
       {sources.map((item, index) => {
         return (
           <div key={index}>
