@@ -3,6 +3,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      'esm': '440px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       'sans': ['"Roboto Slab"', 'sans'],
       'serif': ['Montserrat', 'serif']
