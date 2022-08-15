@@ -7,7 +7,7 @@ const navbarContent = [
   ['Спецпредложения', '#discounts'], 
   ['Отзывы', '#testimonials'], 
   ['Расположение', '#location'], 
-  ['Контакты', '#contacts']
+  ['Контакты', '#contacts'],
 ]
 
 const Navbar = () => {
