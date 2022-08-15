@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Home, Room1, Room2, Room3, Room4, ErrorPage } from './pages';
+import { Home, Room1, Room2, Room3, Room4, PrivacyPolicy ,ErrorPage } from './pages';
 import { Navbar, Footer, InfoBar } from './components';
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
         <Route path='/room2' element={<Room2 />} />
         <Route path='/room3' element={<Room3 />} />
         <Route path='/room4' element={<Room4 />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />

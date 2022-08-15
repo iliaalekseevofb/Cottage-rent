@@ -63,7 +63,7 @@ const InfoBar = () => {
           {/* Location */}
           <div className='hidden xl:flex justify-end items-center mr-10'>
             <a href='#location'>
-              <ImLocation2 size={36} className='text-green-700 mr-3' />
+              <ImLocation2 size={36} className='text-green-800 mr-3' />
             </a>
             <div>
               <h3 className='text-xl font-sans'>Где мы находимся?</h3>
@@ -73,7 +73,7 @@ const InfoBar = () => {
           {/* Numbers */}
           <div className='hidden xl:flex justify-end items-center mr-10'>
             <a href='#contacts'>
-              <BsFillTelephoneFill size={32} className='text-green-700 mr-3' />
+              <BsFillTelephoneFill size={32} className='text-green-800 mr-3' />
             </a>
             <div>
               <h3 className='text-xl font-sans'>Как связаться?</h3>
@@ -83,7 +83,7 @@ const InfoBar = () => {
           </div>
           {/* Order call button */}
           <div className='hidden sm:flex justify-end items-center'>
-            <button className='px-4 py-3 rounded-2xl bg-green-600 hover:bg-green-700 duration-200 font-serif text-xl font-bold text-white'>
+            <button className='px-4 py-3 rounded-2xl bg-green-600 hover:brightness-75 duration-200 font-serif text-xl font-bold text-white'>
               Заказать звонок
             </button>
           </div>

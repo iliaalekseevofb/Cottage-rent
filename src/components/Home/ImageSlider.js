@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { kennyTimmer1, kennyTimmer2, matthewHarwood, simonWaelti, stephenWheeler } from '../../assets';
+import {Link} from 'react-router-dom';
+import { birgitLoit, kennyTimmer1, matthewHarwood, simonWaelti, stephenWheeler } from '../../assets';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
-const sources = [stephenWheeler, kennyTimmer1, kennyTimmer2, matthewHarwood, simonWaelti];
+const sources = [birgitLoit, stephenWheeler, kennyTimmer1, matthewHarwood, simonWaelti];
 const headers = [
   'Отдых для всей семьи',
-  'Черное море в 7 минутах ходьбы',
+  'Черное море в 7 минутах',
   'Комфортные номера',
-  'Магазины и кафе в двух шагах',
-  'Необыкновенная природа вокруг'
+  'Магазины и кафе рядом',
+  'Необыкновенная природа'
 ]
 const texts = [
   'Приезжайте к нам всей семьей и проведите свой незабываемый отпуск! В наших номерах место найдется для каждого',
-  'Забронируйте номер всего в 7 минутах ходьбы от черного моря и не переживайте о том, как будете добираться',
+  'Забронируйте номер всего в нескольких минутах ходьбы от черного моря и не переживайте о том, как будете добираться',
   'В наших номерах вы сможете время в полном комфорте и насладиться пейзажами из окна',
-  'Магазины и различные кафе находятся по всей округе, так что вам даже не нужно далеко ездить',
+  'Магазины и различные кафе находятся по всей округе. Вам даже не нужно далеко ездить',
   'Уже просто выглянув в окно, вы удивитесь завораживающей красоте южной природы, лиственных лесов и гор'
 ]
 
@@ -42,19 +43,29 @@ const ImageSlider = () => {
   }
 
   return (
-    <div className='w-full h-[30vh] sm:h-[40vh] lg:h-[440px] xl:h-[580px] relative overflow-hidden border-b-4 border-green-700'>
+    <div className='w-full h-[30vh] sm:h-[40vh] lg:h-[440px] xl:h-[600px] relative overflow-hidden border-b-4 border-green-700'>
       {sources.map((item, index) => {
         return (
           <div key={index}>
             <div className={`${slideIndex === index + 1 ? 'opacity-100' : 'opacity-0'} w-full h-full absolute z-10 transition-opacity ease-in-out duration-300`}>
               <img className = 'w-full h-full object-cover brightness-50' src={item} alt='...' />
             </div>
-            <h1 className='absolute z-20 top-[25%] left-[15%] text-white font-sans text-5xl font-semibold'>{headers[slideIndex-1]}</h1>
-            <h3 className='absolute z-20 top-[40%] left-[15%] w-[580px] text-white font-serif text-2xl'>{texts[slideIndex-1]}</h3>
+            <div className='absolute z-20 top-[28%] left-[15%]'>
+              <h1 className='text-white font-sans text-5xl font-semibold'>{headers[slideIndex-1]}</h1>
+              <h3 className='my-10 max-w-[680px] text-white font-serif text-2xl'>{texts[slideIndex-1]}</h3>
+              <button className='w-48 h-16 text-white text-xl rounded-md bg-orange-400 hover:brightness-75 duration-200'>Подробнее</button>
+            </div>
           </div>
         )
       })}
-      <button className='absolute z-20 top-[65%] left-[15%] w-48 h-16 text-white text-xl rounded-md bg-orange-400 hover:bg-orange-500 duration-200'>Подробнее</button>
+      <div className='absolute overflow-hidden hidden 2xl:block z-20 top-[10%] bottom-[10%] right-[15%] w-[360px] bg-white rounded-xl shadow-xl p-7'>
+        <h1 className='text-3xl font-bold'>Закажите звонок</h1>
+        <h3 className='text-lg font-serif my-5'>Оставьте заявку и мы перезвоним вам в течение 15 минут</h3>
+        <input type='text' placeholder='* Имя:' className='w-full p-2 text-lg rounded-md border border-neutral-400 outline-1 outline-green-800 mb-3' />
+        <input type='text' placeholder='* Телефон:' className='w-full p-2 text-lg rounded-md border border-neutral-400 outline-1 outline-green-800 ' />
+        <p className='my-5'>Отправляя заявку, вы соглашаетесь с <Link className='text-green-600' to='/privacy-policy'>Политикой конфиденциальности</Link></p>
+        <button className='bg-green-600 hover:brightness-75 duration-200 rounded-xl text-white text-xl py-3 px-4'>Отправить</button>
+      </div>
       <button onClick={nextSlide} className='w-[40px] sm:w-[60px] h-full absolute z-20 flex justify-center items-center text-white cursor-pointer top-0 bottom-0 right-0 hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
         <IoIosArrowForward size={24} />
       </button>
