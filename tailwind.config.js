@@ -10,6 +10,7 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      'short': { 'raw': '(max-height: 600px)' }
     },
     fontFamily: {
       'sans': ['"Roboto Slab"', 'sans'],
