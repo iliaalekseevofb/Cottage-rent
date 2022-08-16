@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ImLocation2 } from 'react-icons/im';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FiMenu } from 'react-icons/fi';
+import PopupForm from './PopupForm';
 
 const navbarContent = [
   ['О нас', '#about'], 
@@ -18,6 +19,7 @@ const phoneNumbers = ['+ 7 (987) 65-43-210', '+ 7 (123) 45-67-890'];
 
 const InfoBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [togglePopup, setTogglePopup] = useState(false);
 
   const menuRef = useRef();
   useEffect(() => {
@@ -97,6 +99,7 @@ const InfoBar = () => {
           </div>
         </div>
       </div>
+      <PopupForm />
     </div>
   )
 }
