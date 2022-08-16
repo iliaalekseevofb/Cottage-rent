@@ -85,7 +85,7 @@ const InfoBar = () => {
           </div>
           {/* Order call button */}
           <div className='hidden sm:flex justify-end items-center'>
-            <button className='px-4 py-3 rounded-2xl bg-green-600 hover:brightness-75 duration-200 font-serif text-xl font-bold text-white'>
+            <button onClick={() => setTogglePopup(true)} className='px-4 py-3 rounded-2xl bg-green-600 hover:brightness-75 duration-200 font-serif text-xl font-bold text-white'>
               Заказать звонок
             </button>
           </div>
@@ -99,7 +99,7 @@ const InfoBar = () => {
           </div>
         </div>
       </div>
-      <PopupForm />
+      <PopupForm togglePopup={togglePopup} setTogglePopup={setTogglePopup} />
     </div>
   )
 }
