@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import { GrClose } from 'react-icons/gr';
 
 const PopupForm = ({togglePopup, setTogglePopup}) => {
-  const popupRef = useRef();
+  const popupRef = useRef(null);
   useEffect(() => {
     let popupHandler = (e) => {
       if (!popupRef.current.contains(e.target))
-      setTogglePopup(false);
+        setTogglePopup(false);
     };
     document.addEventListener('mousedown', popupHandler)
   });
 
-  return (togglePopup) ?
-    (<div className='fixed z-30 top-0 left-0 w-full h-[100vh] flex justify-center items-center bg-myBackground'>
+  return (
+    <div className={`${togglePopup ? 'block' : 'hidden'} fixed z-30 top-0 left-0 w-full h-[100vh] flex justify-center items-center bg-myBackground`}>
       <div className='w-[560px] h-[760px] bg-white rounded-lg' ref={popupRef}>
         <div className='flex justify-between items-center p-5 border-b border-neutral-300'>
           <h1 className='text-3xl font-bold'>Заказать звонок</h1>
@@ -36,8 +36,8 @@ const PopupForm = ({togglePopup, setTogglePopup}) => {
           <button className='w-full p-3 rounded-md bg-green-600 hover:brightness-75 duration-200 text-white text-xl' onClick={() => setTogglePopup(false)}>Отправить</button>
         </div>
       </div>
-    </div>)
-  : '';
+    </div>
+  )
 }
 
 export default PopupForm
