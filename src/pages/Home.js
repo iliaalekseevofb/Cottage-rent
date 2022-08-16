@@ -1,10 +1,11 @@
 import React from 'react';
-import ImageSlider from '../components/Home/ImageSlider';
+import { ImageSlider, About } from '../components';
 
 const Home = () => {
   return (
     <div>
       <ImageSlider />
+      <About />
     </div>
   )
 }
