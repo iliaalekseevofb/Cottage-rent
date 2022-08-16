@@ -3,3 +3,4 @@ export {default as matthewHarwood} from './images/matthew-harwood-THTAP-GzI_8-un
 export {default as simonWaelti} from './images/simon-waelti-G63__2LCIyU-unsplash.jpg';
 export {default as stephenWheeler} from './images/stephen-wheeler-hBh9JbyeCtg-unsplash (1).jpg';
 export {default as birgitLoit} from './images/birgit-loit-yaAh6fIp9NE-unsplash.jpg';
+export {default as vuAnh} from './images/vu-anh-ThyBKNya1yY-unsplash.jpg';
