@@ -46,10 +46,10 @@ const Accomodation = () => {
         </div>
         <div className='grid grid-cols-4 grid-rows-1 gap-12 mt-16'>
           {sliderImages.map((item, index) => (
-            <div key={index} className='h-[600px] bg-white shadow-lg rounded-lg'>
+            <div key={index} className='h-[560px] bg-white shadow-lg rounded-lg'>
               <div className='relative h-56'>
                 {item.map((image, innerIndex) => (
-                  <div className={`${slideIndex[index] === innerIndex ? 'opacity-100' : 'opacity-0'} w-full h-full absolute transition-opacity ease-in-out duration-300`}>
+                  <div key={innerIndex} className={`${slideIndex[index] === innerIndex ? 'opacity-100' : 'opacity-0'} w-full h-full absolute transition-opacity ease-in-out duration-300`}>
                     <img className='w-full h-full object-cover rounded-t-lg' src={image} alt='...'/>
                   </div>
                 ))}
@@ -60,14 +60,16 @@ const Accomodation = () => {
                   <IoIosArrowBack size={24} />
                 </button>
               </div>
-              <div>
-                {/* Names */}
-              </div>
-              <div>
-                {/* Prices */}
-              </div>
-              <div>
-                {/* Description */}
+              <div className='w-full p-3 cursor-pointer'>
+                <div className='w-full mb-3'>
+                  <h2 className='text-2xl text-center'>{roomNames[index]}</h2>
+                </div>
+                <div className='w-full mb-3'>
+                  <h4 className='text-xl text-center text-orange-600'>от {roomPrices[index]} руб.</h4>
+                </div>
+                <div className='w-full'>
+                  <p className='text-lg text-center text-neutral-600'>{roomDescriptions[index]}</p>
+                </div>
               </div>
               <div>
                 {/* Button */}
