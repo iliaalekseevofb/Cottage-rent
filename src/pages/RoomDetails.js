@@ -11,7 +11,6 @@ const roomInfo = [
 
 const RoomDetails = () => {
   const {id} = useParams();
-
   return (
     <div>
       {roomInfo.map((item, itemIndex) => {
