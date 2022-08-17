@@ -47,7 +47,7 @@ const ImageSlider = () => {
       {sources.map((item, index) => {
         return (
           <div key={index}>
-            <div className={`${slideIndex === index + 1 ? 'opacity-100' : 'opacity-0'} w-full h-full absolute z-10 transition-opacity ease-in-out duration-300`}>
+            <div className={`${slideIndex === index + 1 ? 'opacity-100' : 'opacity-0'} w-full h-full absolute z-10 transition-opacity ease-in-out duration-200`}>
               <img className = 'w-full h-full object-cover brightness-50' src={item} alt='...' />
             </div>
             <div className='absolute z-20 top-[16%] sm:top-[24%] lg:top-[16%] xl:top-[28%] left-[15%]'>

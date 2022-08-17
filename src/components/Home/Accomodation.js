@@ -6,9 +6,10 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 const sliderImages = [
   [amyHumphries2, amyHumphries1, andresMolina],
   [andrewSpencer, clayBanks, coleAnkney],
-  [hansIsaacson1, hansIsaacson2, julianHochgesang],
+  [hansIsaacson2, hansIsaacson1, julianHochgesang],
   [justinKauffman, loeweTechnology, samManns]
 ];
+const roomNames = ['Номер "Делюкс"', 'Номер "Стандарт"', 'Номер "Эконом"', 'Номер "Люкс"']
 const roomPrices = [3290, 2590, 1990, 4790];
 const roomDescriptions = [
   'В нашем распоряжении имеются как маленькие домики на компании из 1 человек, так и просторные коттеджи для больших семей или компаний',
@@ -37,7 +38,7 @@ const Accomodation = () => {
   }
 
   return (
-    <div id='accomodation' className='w-full px-5 flex justify-center items-center mt-16 py-8 bg-neutral-100'>
+    <div id='accomodation' className='w-full px-5 flex justify-center items-center mt-16 py-12 bg-neutral-100'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Наши номера</h1>
@@ -52,12 +53,15 @@ const Accomodation = () => {
                     <img className='w-full h-full object-cover rounded-t-lg' src={image} alt='...'/>
                   </div>
                 ))}
-                <button onClick={() => nextSlide(index)} className='absolute z-20 flex justify-center items-center top-0 bottom-0 right-0 text-white cursor-pointer'>
+                <button onClick={() => nextSlide(index)} className='w-[40px] rounded-tr-lg absolute z-20 flex justify-center items-center top-0 bottom-0 right-0 text-white cursor-pointer hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
                   <IoIosArrowForward size={24} />
                 </button>
-                <button onClick={() => {prevSlide(index)}} className='absolute z-20 flex justify-center items-center top-0 bottom-0 left-0 text-white cursor-pointer'>
+                <button onClick={() => prevSlide(index)} className='w-[40px] rounded-tl-lg absolute z-20 flex justify-center items-center top-0 bottom-0 left-0 text-white cursor-pointer hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
                   <IoIosArrowBack size={24} />
                 </button>
+              </div>
+              <div>
+                {/* Names */}
               </div>
               <div>
                 {/* Prices */}
