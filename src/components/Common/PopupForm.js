@@ -13,7 +13,7 @@ const PopupForm = ({togglePopup, setTogglePopup}) => {
   });
 
   return (
-    <div className={`${togglePopup ? 'hidden sm:flex' : 'hidden'} fixed z-30 top-0 left-0 w-full min-h-[100vh] flex justify-center items-center bg-myBackground`}>
+    <div className={`${togglePopup ? 'hidden sm:flex' : 'hidden'} fixed z-30 top-0 left-0 w-full min-h-screen flex justify-center items-center bg-myBackground`}>
       <div className='short:w-[420px] w-[560px] short:h-[500px] h-[740px] bg-white rounded-lg' ref={popupRef}>
         <div className='flex justify-between items-center short:p-3 p-4 border-b border-neutral-300'>
           <h1 className='short:text-xl text-3xl font-bold'>Заказать звонок</h1>

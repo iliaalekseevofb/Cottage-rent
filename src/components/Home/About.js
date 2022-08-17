@@ -13,7 +13,7 @@ const About = () => {
     <div id='about' className='w-full px-5 flex justify-center items-center mt-8 lg:mt-12'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
-          <h1 className='text-3xl lg:text-5xl font-sans pb-2'>О нас</h1>
+          <h1 className='text-3xl lg:text-4xl font-sans pb-2'>О нас</h1>
           <p className='w-12 lg:w-20 border-t-4 border-orange-400'></p>
         </div>
         <div className='mt-8 lg:mt-12 xl:mt-16 flex flex-col xl:flex-row justify-center xl:justify-between items-center xl:items-start'>
@@ -27,7 +27,7 @@ const About = () => {
               {count.map((item, index) => (
                 <div key={index} className='w-full sm:w-48 mr-5 mb-6 sm:mb-0' >
                   <h1 className='text-6xl text-center xl:text-left text-orange-500'>{item[0]}</h1>
-                  <p className='text-xl text-center xl:text-left text-neutral-500'>{item[1]}</p>
+                  <p className='text-xl text-center xl:text-left font-serif font-medium text-neutral-500'>{item[1]}</p>
                 </div>
               ))}
             </div>
