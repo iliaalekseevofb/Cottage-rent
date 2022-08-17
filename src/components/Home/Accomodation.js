@@ -1,12 +1,20 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { amyHumphries1, amyHumphries2, andresMolina, andrewSpencer, clayBanks, coleAnkney, hansIsaacson1, hansIsaacson2, julianHochgesang, justinKauffman, loeweTechnology, samManns } from '../../assets';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 const sliderImages = [
-  [amyHumphries1, amyHumphries2, andresMolina],
+  [amyHumphries2, amyHumphries1, andresMolina],
   [andrewSpencer, clayBanks, coleAnkney],
   [hansIsaacson1, hansIsaacson2, julianHochgesang],
   [justinKauffman, loeweTechnology, samManns]
+];
+const roomPrices = [3290, 2590, 1990, 4790];
+const roomDescriptions = [
+  'В нашем распоряжении имеются как маленькие домики на компании из 1 человек, так и просторные коттеджи для больших семей или компаний',
+  'В нашем распоряжении имеются как маленькие домики на компании из 2 человек, так и просторные коттеджи для больших семей или компаний',
+  'В нашем распоряжении имеются как маленькие домики на компании из 3 человек, так и просторные коттеджи для больших семей или компаний',
+  'В нашем распоряжении имеются как маленькие домики на компании из 4 человек, так и просторные коттеджи для больших семей или компаний'
 ]
 
 const Accomodation = () => {
@@ -35,10 +43,31 @@ const Accomodation = () => {
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Наши номера</h1>
           <p className='w-12 lg:w-20 border-t-4 border-green-600'></p>
         </div>
-        <div className='grid grid-cols-2 grid-rows-2 gap-8'>
+        <div className='grid grid-cols-4 grid-rows-1 gap-12 mt-16'>
           {sliderImages.map((item, index) => (
-            <div key={index} className='h-[400px] bg-white shadow-lg rounded-lg'>
-              hello
+            <div key={index} className='h-[600px] bg-white shadow-lg rounded-lg'>
+              <div className='relative h-56'>
+                {item.map((image, innerIndex) => (
+                  <div className={`${slideIndex[index] === innerIndex ? 'opacity-100' : 'opacity-0'} w-full h-full absolute transition-opacity ease-in-out duration-300`}>
+                    <img className='w-full h-full object-cover rounded-t-lg' src={image} alt='...'/>
+                  </div>
+                ))}
+                <button onClick={() => nextSlide(index)} className='absolute z-20 flex justify-center items-center top-0 bottom-0 right-0 text-white cursor-pointer'>
+                  <IoIosArrowForward size={24} />
+                </button>
+                <button onClick={() => {prevSlide(index)}} className='absolute z-20 flex justify-center items-center top-0 bottom-0 left-0 text-white cursor-pointer'>
+                  <IoIosArrowBack size={24} />
+                </button>
+              </div>
+              <div>
+                {/* Prices */}
+              </div>
+              <div>
+                {/* Description */}
+              </div>
+              <div>
+                {/* Button */}
+              </div>
             </div>
           ))}
         </div>
