@@ -10,13 +10,13 @@ const count = [
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-5 flex justify-center items-center mt-8 lg:mt-16'>
+    <div id='about' className='w-full px-5 flex justify-center items-center mt-8 lg:mt-12'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-3xl lg:text-5xl font-sans pb-2'>О нас</h1>
           <p className='w-12 lg:w-20 border-t-4 border-orange-400'></p>
         </div>
-        <div className='mt-8 lg:mt-12 xl:mt-24 flex flex-col xl:flex-row justify-center xl:justify-between items-center xl:items-start'>
+        <div className='mt-8 lg:mt-12 xl:mt-16 flex flex-col xl:flex-row justify-center xl:justify-between items-center xl:items-start'>
           <div className='w-full sm:w-[500px] sm:min-w-[500px] sm:h-[500px] mb-8 lg:mb-12 xl:mb-0 xl:mr-12'>
             <img className='w-full h-full rounded-[20px] sm:rounded-[250px] border-4 border-green-700 object-cover' src={vuAnh} alt='house' />
           </div>
