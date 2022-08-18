@@ -90,25 +90,21 @@ const RoomDetails = () => {
                   <div className='w-1/2 h-full pl-8'>
                     <h1 className='text-3xl font-semibold mb-6 pl-4 border-l-4 border-green-600'>Характеристики</h1>
                     <div className='flex justify-between items-center'>
-                        <div>
-                          <ul>
-                            {characteristicsContent.map((charItem, charIndex) => (
-                              <li key={charIndex} className='flex justify-start items-center pb-4'>
-                                {charItem[0]}
-                                <p className='ml-4 text-lg text-neutral-500 font-serif'>{charItem[1]}</p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <ul>
-                            {characteristicsContent.map((charItem, charIndex) => (
-                              <li key={charIndex} className='flex justify-start items-center pb-4'>
-                                <p className='ml-4 text-lg font-medium font-serif'>{charItem[2]}</p>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                      <ul>
+                        {characteristicsContent.map((charItem, charIndex) => (
+                          <li key={charIndex} className='flex justify-start items-center pb-4'>
+                            {charItem[0]}
+                            <p className='ml-4 text-lg text-neutral-500 font-serif'>{charItem[1]}</p>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul>
+                        {characteristicsContent.map((charItem, charIndex) => (
+                          <li key={charIndex} className='flex justify-start items-center pb-4'>
+                            <p className='ml-4 text-lg font-medium font-serif'>{charItem[2]}</p>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
