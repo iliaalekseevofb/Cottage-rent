@@ -4,9 +4,9 @@ import { amyHumphries1, amyHumphries2, andresMolina, andrewSpencer, clayBanks, c
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 const sliderImages = [
-  [amyHumphries2, amyHumphries1, andresMolina],
+  [amyHumphries1, amyHumphries2, andresMolina],
   [andrewSpencer, clayBanks, coleAnkney],
-  [hansIsaacson2, hansIsaacson1, julianHochgesang],
+  [hansIsaacson1, hansIsaacson2, julianHochgesang],
   [justinKauffman, loeweTechnology, samManns]
 ];
 const roomNames = ['Номер "Делюкс"', 'Номер "Стандарт"', 'Номер "Эконом"', 'Номер "Люкс"']
