@@ -64,7 +64,7 @@ const ImageSlider = () => {
         <input type='text' placeholder='* Имя:' className='w-full p-2 text-lg rounded-md border border-neutral-400 outline-1 outline-green-800 mb-3' />
         <input type='text' placeholder='* Телефон:' className='w-full p-2 text-lg rounded-md border border-neutral-400 outline-1 outline-green-800 ' />
         <p className='my-5'>Отправляя заявку, вы соглашаетесь с <Link className='text-green-600' to='/privacy-policy'>Политикой конфиденциальности</Link></p>
-        <button className='bg-green-600 hover:brightness-75 duration-200 rounded-xl text-white text-xl py-3 px-4'>Отправить</button>
+        <button className='bg-green-600 hover:brightness-75 duration-200 rounded-md text-white text-xl py-3 px-4'>Отправить</button>
       </div>
       <button onClick={nextSlide} className='w-[40px] sm:w-[60px] h-full absolute z-20 flex justify-center items-center text-white cursor-pointer top-0 bottom-0 right-0 hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
         <IoIosArrowForward size={24} />

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { amyHumphries1, amyHumphries2, andresMolina, andrewSpencer, clayBanks, coleAnkney, hansIsaacson1, hansIsaacson2, julianHochgesang, justinKauffman, loeweTechnology, samManns } from '../../assets';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
@@ -19,6 +19,8 @@ const roomDescriptions = [
 ]
 
 const Accomodation = () => {
+  let navigate = useNavigate();
+
   const [slideIndex, setSlideIndex] = useState({0: 0, 1: 0, 2: 0, 3: 0});
 
   const nextSlide = (index) => {
@@ -60,19 +62,23 @@ const Accomodation = () => {
                   <IoIosArrowBack size={24} />
                 </button>
               </div>
-              <div className='w-full p-3 cursor-pointer'>
-                <div className='w-full mb-3'>
-                  <h2 className='text-2xl text-center'>{roomNames[index]}</h2>
+              <Link to={`room-${[index + 1].toString()}`}>
+                <div className='w-full p-3 cursor-pointer'>
+                  <div className='w-full mb-3'>
+                    <h2 className='text-2xl text-center'>{roomNames[index]}</h2>
+                  </div>
+                  <div className='w-full mb-3'>
+                    <h4 className='text-xl text-center text-orange-600'>от {roomPrices[index]} руб.</h4>
+                  </div>
+                  <div className='w-full'>
+                    <p className='text-lg text-center text-neutral-600'>{roomDescriptions[index]}</p>
+                  </div>
                 </div>
-                <div className='w-full mb-3'>
-                  <h4 className='text-xl text-center text-orange-600'>от {roomPrices[index]} руб.</h4>
-                </div>
-                <div className='w-full'>
-                  <p className='text-lg text-center text-neutral-600'>{roomDescriptions[index]}</p>
-                </div>
-              </div>
-              <div>
-                {/* Button */}
+              </Link>
+              <div className='w-full flex justify-center items-center'>
+                <button onClick={() => {navigate(`room-${[index + 1].toString()}`, { replace: false })}} className='mt-3 py-3 px-6 rounded-md bg-green-600 hover:brightness-75 duration-200 text-lg text-white'>
+                  Подробнее
+                </button>
               </div>
             </div>
           ))}

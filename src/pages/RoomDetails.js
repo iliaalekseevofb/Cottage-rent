@@ -18,7 +18,7 @@ const RoomDetails = () => {
             <div key={itemIndex}>
               {item[1].map((image, imageIndex) => (
                 <div key={imageIndex}>
-                  <img src={image} alt='...' />
+                  {id}
                 </div>
               ))}
             </div>
