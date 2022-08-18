@@ -10,7 +10,7 @@ const count = [
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-5 flex justify-center items-center mt-8 lg:mt-12'>
+    <div id='about' className='w-full px-5 flex justify-center items-center pt-8 lg:pt-12'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>О нас</h1>
