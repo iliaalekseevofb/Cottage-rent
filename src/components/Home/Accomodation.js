@@ -40,16 +40,16 @@ const Accomodation = () => {
   }
 
   return (
-    <div id='accomodation' className='w-full px-5 flex justify-center items-center mt-16 py-12 bg-neutral-100'>
+    <div id='accomodation' className='w-full px-5 flex justify-center items-center mt-6 xl:mt-12 py-12 bg-neutral-100'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Наши номера</h1>
           <p className='w-12 lg:w-20 border-t-4 border-green-600'></p>
         </div>
-        <div className='grid grid-cols-4 grid-rows-1 gap-12 mt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-rows-4 md:grid-rows-2 xl:grid-rows-1 gap-12 mt-16'>
           {sliderImages.map((item, index) => (
             <div key={index} className='h-[560px] bg-white shadow-lg rounded-lg'>
-              <div className='relative h-56'>
+              <div className='relative h-64 xl:h-56'>
                 {item.map((image, innerIndex) => (
                   <div key={innerIndex} className={`${slideIndex[index] === innerIndex ? 'opacity-100' : 'opacity-0'} w-full h-full absolute transition-opacity ease-in-out duration-300`}>
                     <img className='w-full h-full object-cover rounded-t-lg' src={image} alt='...'/>
@@ -63,7 +63,7 @@ const Accomodation = () => {
                 </button>
               </div>
               <Link to={`room-${[index + 1].toString()}`}>
-                <div className='w-full p-3 cursor-pointer'>
+                <div className='w-full px-3 pt-5 pb-1 xl:p-3 cursor-pointer'>
                   <div className='w-full mb-3'>
                     <h2 className='text-2xl text-center'>{roomNames[index]}</h2>
                   </div>
@@ -71,12 +71,12 @@ const Accomodation = () => {
                     <h4 className='text-xl text-center text-orange-600'>от {roomPrices[index]} руб.</h4>
                   </div>
                   <div className='w-full'>
-                    <p className='text-lg text-center text-neutral-600'>{roomDescriptions[index]}</p>
+                    <p className='text-md 2xl:text-lg text-center text-neutral-600'>{roomDescriptions[index]}</p>
                   </div>
                 </div>
               </Link>
               <div className='w-full flex justify-center items-center'>
-                <button onClick={() => {navigate(`room-${[index + 1].toString()}`, { replace: false })}} className='mt-3 py-3 px-6 rounded-md bg-green-600 hover:brightness-75 duration-200 text-lg text-white'>
+                <button onClick={() => {navigate(`room-${[index + 1].toString()}`, { replace: false })}} className='mt-3 py-3 px-6 rounded-md bg-green-600 hover:brightness-75 duration-200 text-xl xl:text-lg text-white'>
                   Подробнее
                 </button>
               </div>
