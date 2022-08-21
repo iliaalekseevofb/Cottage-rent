@@ -16,3 +16,9 @@ export {default as julianHochgesang} from './images/RoomSlider/julian-hochgesang
 export {default as justinKauffman} from './images/RoomSlider/justin-kauffman-yyILhheLSd4-unsplash.jpg';
 export {default as loeweTechnology} from './images/RoomSlider/loewe-technology-rfFzKAjter0-unsplash.jpg';
 export {default as samManns} from './images/RoomSlider/sam-manns-b-HIPPuBgeM-unsplash.jpg';
+export {default as baileyAnselme} from './images/MainSlider/bailey-anselme-Bkp3gLygyeA-unsplash.jpg';
+export {default as birgitLoit2} from './images/MainSlider/birgit-loit-owRWzh3NDqo-unsplash.jpg';
+export {default as florisBronkhorst} from './images/MainSlider/floris-bronkhorst-OLFA5DgSIFo-unsplash.jpg';
+export {default as minnaAutio} from './images/MainSlider/minna-autio-izOq1qdSfS8-unsplash.jpg';
+export {default as ostapSenyuk} from './images/MainSlider/ostap-senyuk-6WIG-gGY2u8-unsplash.jpg';
+export {default as vuAnh2} from './images/MainSlider/vu-anh-ExOmPidaHvY-unsplash.jpg';

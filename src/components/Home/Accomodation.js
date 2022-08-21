@@ -40,19 +40,21 @@ const Accomodation = () => {
   }
 
   return (
-    <div id='accomodation' className='w-full px-5 flex justify-center items-center mt-6 xl:mt-12 py-12 bg-neutral-100'>
+    <div id='accomodation' className='w-full px-5 flex justify-center items-center xl:mt-12 py-12 bg-neutral-100'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Наши номера</h1>
           <p className='w-12 lg:w-20 border-t-4 border-green-600'></p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-rows-4 md:grid-rows-2 xl:grid-rows-1 gap-12 mt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-rows-4 md:grid-rows-2 xl:grid-rows-1 gap-12 mt-8 sm:mt-12 lg:mt-16'>
           {sliderImages.map((item, index) => (
-            <div key={index} className='h-[560px] bg-white shadow-lg rounded-lg'>
+            <div key={index} className='h-[560px] bg-white shadow-lg hover:shadow-2xl duration-200 rounded-lg'>
               <div className='relative h-64 xl:h-56'>
                 {item.map((image, innerIndex) => (
                   <div key={innerIndex} className={`${slideIndex[index] === innerIndex ? 'opacity-100' : 'opacity-0'} w-full h-full absolute transition-opacity ease-in-out duration-300`}>
-                    <img className='w-full h-full object-cover rounded-t-lg' src={image} alt='...'/>
+                    <Link to={`room-${[index + 1].toString()}`}>
+                      <img className='w-full h-full object-cover rounded-t-lg' src={image} alt='...'/>
+                    </Link>
                   </div>
                 ))}
                 <button onClick={() => nextSlide(index)} className='w-[40px] rounded-tr-lg absolute z-20 flex justify-center items-center top-0 bottom-0 right-0 text-white cursor-pointer hover:bg-gradient-to-t hover:from-myGradient hover:to-myGradient'>
