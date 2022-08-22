@@ -22,6 +22,3 @@ export {default as florisBronkhorst} from './images/MainSlider/floris-bronkhorst
 export {default as minnaAutio} from './images/MainSlider/minna-autio-izOq1qdSfS8-unsplash.jpg';
 export {default as ostapSenyuk} from './images/MainSlider/ostap-senyuk-6WIG-gGY2u8-unsplash.jpg';
 export {default as vuAnh2} from './images/MainSlider/vu-anh-ExOmPidaHvY-unsplash.jpg';
-export {default as Forest} from './icons/Forest.svg';
-export {default as Nature} from './icons/Nature.svg';
-export {default as RobinBird} from './icons/Robin bird.svg';
