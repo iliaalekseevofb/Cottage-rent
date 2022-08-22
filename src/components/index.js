@@ -4,4 +4,4 @@ export {default as InfoBar} from './Common/InfoBar';
 export {default as ImageSlider} from './Home/ImageSlider';
 export {default as About} from './Home/About';
 export {default as Accomodation} from './Home/Accomodation';
-export {default as Features} from './Home/Features';
+export {default as Gallery} from './Home/Gallery';

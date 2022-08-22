@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         'myGradient': 'rgba(0, 0, 0, 0.2)',
         'myBackground': 'rgba(0, 0, 0, 0.4)'
-      }
+      },
     }
   },
   plugins: [],
