@@ -43,13 +43,13 @@ const Gallery = () => {
   }
 
   return (
-    <div id='gallery' className='w-full px-5 flex justify-center items-center py-12'>
+    <div id='gallery' className='w-full px-5 flex justify-center items-center py-6 md:py-8 lg:py-10 xl:py-12'>
       <div className='w-full max-w-screen-2xl'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Галерея</h1>
           <p className='w-12 lg:w-20 border-t-4 border-orange-500'></p>
         </div>
-        <div className='w-full grid grid-cols-4 grid-rows-2 gap-4 overflow-hidden mt-12'>
+        <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-8 sm:grid-rows-4 lg:grid-rows-2 gap-4 overflow-hidden mt-12'>
           {galleryContent.map((item, index) => (
             <div key={index} className='realtive overflow-hidden cursor-pointer flex justify-center items-center rounded-xl'>
               <img onClick={() => handleClick(item[0], index)} src={item[0]} alt={item[1]} className='w-full h-full object-cover transition ease-in-out hover:scale-125 hover:brightness-50 duration-500' />

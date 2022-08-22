@@ -10,7 +10,7 @@ const count = [
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-5 flex justify-center items-center pt-4 sm:pt-8'>
+    <div id='about' className='w-full px-5 flex justify-center items-center py-4 sm:py-8'>
       <div className='w-full max-w-screen-2xl'>
         <div className='sm:mt-8 xl:mt-10 flex flex-col xl:flex-row justify-center xl:justify-between items-center xl:items-start'>
           <div className='hidden xl:block w-full sm:w-[500px] sm:min-w-[500px] sm:h-[500px] mb-8 lg:mb-12 xl:mb-0 xl:mr-12'>
