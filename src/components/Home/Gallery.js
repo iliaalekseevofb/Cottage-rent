@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 import { baileyAnselme, birgitLoit, birgitLoit2, florisBronkhorst, kennyTimmer1, matthewHarwood, minnaAutio, ostapSenyuk } from '../../assets';
 
 const galleryContent = [
@@ -13,6 +14,34 @@ const galleryContent = [
 ]
 
 const Gallery = () => {
+  const [clickedImage, setClickedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const handleClick = (item, index) => {
+    setCurrentIndex(index);
+    setClickedImage(item);
+  }
+
+  const nextImage = () => {
+    if (currentIndex + 1 !== 8) {
+      setCurrentIndex(currentIndex + 1);
+      setClickedImage(galleryContent[currentIndex + 1][0]);
+    } else {
+      setCurrentIndex(0);
+      setClickedImage(galleryContent[0][0]);
+    }
+  }
+
+  const prevImage = () => {
+    if (currentIndex - 1 < 0) {
+      setCurrentIndex(7);
+      setClickedImage(galleryContent[7][0]);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+      setClickedImage(galleryContent[currentIndex - 1][0]);
+    }
+  }
+
   return (
     <div id='gallery' className='w-full px-5 flex justify-center items-center py-12'>
       <div className='w-full max-w-screen-2xl'>
@@ -20,13 +49,14 @@ const Gallery = () => {
           <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Галерея</h1>
           <p className='w-12 lg:w-20 border-t-4 border-orange-500'></p>
         </div>
-        <div className='w-full grid grid-cols-4 grid-rows-2 gap-2 rounded-xl overflow-hidden mt-12'>
+        <div className='w-full grid grid-cols-4 grid-rows-2 gap-4 overflow-hidden mt-12'>
           {galleryContent.map((item, index) => (
-            <div className='realtive w-full h-full overflow-hidden cursor-pointer flex justify-center items-center'>
-              <img src={item[0]} alt={item[1]} className='w-full h-full object-cover transition ease-in-out hover:scale-125 hover:brightness-50 duration-500' /> 
+            <div key={index} className='realtive overflow-hidden cursor-pointer flex justify-center items-center rounded-xl'>
+              <img onClick={() => handleClick(item[0], index)} src={item[0]} alt={item[1]} className='w-full h-full object-cover transition ease-in-out hover:scale-125 hover:brightness-50 duration-500' />
             </div>
           ))}
         </div>
+        {clickedImage && <Modal clickedImage={clickedImage} setClickedImage={setClickedImage} nextImage={nextImage} prevImage={prevImage} />}
       </div>
     </div>
   )
