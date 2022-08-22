@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import { birgitLoit, kennyTimmer1, matthewHarwood, simonWaelti, stephenWheeler, baileyAnselme, birgitLoit2, florisBronkhorst, minnaAutio, ostapSenyuk, vuAnh2 } from '../../assets';
+import { birgitLoit, baileyAnselme, birgitLoit2, minnaAutio, ostapSenyuk } from '../../assets';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 const sources = [birgitLoit2, birgitLoit, baileyAnselme, minnaAutio, ostapSenyuk];
