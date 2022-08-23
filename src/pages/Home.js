@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageSlider, About, Accomodation, Gallery } from '../components';
+import { ImageSlider, About, Accomodation, Gallery, Testimonials } from '../components';
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
       <About />
       <Accomodation/>
       <Gallery />
+      <Testimonials />
     </div>
   )
 }

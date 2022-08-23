@@ -6,3 +6,4 @@ export {default as About} from './Home/About';
 export {default as Accomodation} from './Home/Accomodation';
 export {default as Gallery} from './Home/Gallery';
 export {default as Modal} from './Home/Modal';
+export {default as Testimonials} from './Home/Testimonials';

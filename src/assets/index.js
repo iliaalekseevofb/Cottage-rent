@@ -23,3 +23,7 @@ export {default as minnaAutio} from './images/MainSlider/minna-autio-izOq1qdSfS8
 export {default as ostapSenyuk} from './images/MainSlider/ostap-senyuk-6WIG-gGY2u8-unsplash.jpg';
 export {default as vuAnh2} from './images/MainSlider/vu-anh-ExOmPidaHvY-unsplash.jpg';
 export {default as close} from './icons/close.svg';
+export {default as christopherCampbell} from './images/Testimonials/christopher-campbell-rDEOVtE7vOs-unsplash.jpg';
+export {default as ethanHoover} from './images/Testimonials/ethan-hoover-0YHIlxeCuhg-unsplash.jpg';
+export {default as karlMagnuson} from './images/Testimonials/karl-magnuson-85J99sGggnw-unsplash.jpg';
+export {default as warrenWong} from './images/Testimonials/warren-wong-bh4LQHcOcxE-unsplash.jpg';
