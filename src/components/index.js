@@ -7,3 +7,4 @@ export {default as Accomodation} from './Home/Accomodation';
 export {default as Gallery} from './Home/Gallery';
 export {default as Modal} from './Home/Modal';
 export {default as Testimonials} from './Home/Testimonials';
+export {default as Contacts} from './Home/Contacts';
