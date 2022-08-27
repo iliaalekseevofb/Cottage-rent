@@ -13,10 +13,10 @@ const testimonialsContent = [
 const Testimonials = () => {
   return (
     <div id='testimonials' className='w-full px-5 flex justify-center items-center py-6 md:py-8 lg:py-10 xl:py-12 bg-neutral-100'>
-      <div className='w-full max-w-screen-2xl'>
+      <div className='w-full max-w-screen-xl'>
         <div className='flex flex-col justify-center items-center mb-20'>
-          <h1 className='text-3xl lg:text-4xl font-sans pb-2'>Отзывы о нас</h1>
-          <p className='w-12 lg:w-20 border-t-4 border-green-600'></p>
+          <h1 className='text-3xl font-sans pb-2'>Отзывы о нас</h1>
+          <p className='w-12 border-t-4 border-green-600'></p>
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 grid-rows-1 sm:grid-rows-2 xl:grid-rows-1 gap-6'>
           {testimonialsContent.map((item, index) => (
@@ -25,16 +25,16 @@ const Testimonials = () => {
                 <img className='w-full h-full object-cover' src={item[0]} alt={item[1]} />
                 <FcGoogle className='bg-white p-1 rounded-full absolute -mt-8 -ml-2' size={40} />
               </div>
-              <h3 className='text-xl font-serif font-medium'>{item[1]}</h3>
-              <h5 className='text-lg font-serif text-neutral-400 mb-2'>{item[2]}</h5>
+              <h3 className='text-lg font-serif font-medium'>{item[1]}</h3>
+              <h5 className='text-md font-serif text-neutral-400 mb-2'>{item[2]}</h5>
               <div className='flex items-center mb-4'>
                 {Array.from({length: 5}).map((item, starIndex) => (
                   <span key={starIndex}>
-                    <AiFillStar className='text-yellow-400' size={28} />
+                    <AiFillStar className='text-yellow-400' size={24} />
                   </span>
                 ))}
               </div>
-              <p className='text-center text-lg font-serif mb-4'>{item[3]}</p>
+              <p className='text-center text-md font-serif mb-4'>{item[3]}</p>
             </div>
           ))}
         </div>
