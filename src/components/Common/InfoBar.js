@@ -53,39 +53,39 @@ const InfoBar = () => {
 
   return (
     <div className='w-full h-20 sm:h-24 xl:h-28 py-1 lg:py-3 px-5 flex justify-center items-center border-b border-neutral-200'>
-      <div className='w-full h-full max-w-screen-2xl flex justify-between items-center'>
+      <div className='w-full h-full max-w-screen-xl flex justify-between items-center'>
         {/* Logo */}
         <Link to='/'>
           <div className='flex justify-center items-start flex-col'>
-            <h1 className='text-xl sm:text-3xl leading-normal font-sans font-bold'>Домик "У Барта"</h1>
-            <p className='text-md sm:text-xl text-green-800 leading-normal font-serif'>Живите в 7 минутах от моря</p>
+            <h1 className='text-xl sm:text-2xl leading-normal font-sans font-bold'>Домик "У Барта"</h1>
+            <p className='text-md sm:text-lg text-green-800 leading-normal font-serif'>Живите в 7 минутах от моря</p>
           </div>
         </Link>
         <div className='flex justify-end items-center'>
           {/* Location */}
           <div className='hidden xl:flex justify-end items-center mr-10'>
             <a href='#location'>
-              <ImLocation2 size={36} className='text-green-800 mr-3' />
+              <ImLocation2 size={32} className='text-green-800 mr-3' />
             </a>
             <div>
-              <h3 className='text-xl font-sans'>Где мы находимся?</h3>
+              <h3 className='text-lg font-sans'>Где мы находимся?</h3>
               <p className='font-serif text-neutral-500'>г. Севастополь, п. Мирный,<br />ул. Каскадная, дом 17</p>
             </div>
           </div>
           {/* Numbers */}
           <div className='hidden xl:flex justify-end items-center mr-10'>
             <a href='#contacts'>
-              <BsFillTelephoneFill size={32} className='text-green-800 mr-3' />
+              <BsFillTelephoneFill size={28} className='text-green-800 mr-3' />
             </a>
             <div>
-              <h3 className='text-xl font-sans'>Как связаться?</h3>
+              <h3 className='text-lg font-sans'>Как связаться?</h3>
               <p className='font-serif text-neutral-500'>{phoneNumbers[0]}</p>
               <p className='font-serif text-neutral-500'>{phoneNumbers[1]}</p>
             </div>
           </div>
           {/* Order call button */}
           <div className='hidden sm:flex justify-end items-center'>
-            <button onClick={() => setTogglePopup(true)} className='px-4 py-3 rounded-md bg-green-600 hover:brightness-75 duration-200 font-serif text-xl font-bold text-white'>
+            <button onClick={() => setTogglePopup(true)} className='px-4 py-3 rounded-md bg-green-600 hover:brightness-75 duration-200 font-serif text-lg font-bold text-white'>
               Заказать звонок
             </button>
           </div>
