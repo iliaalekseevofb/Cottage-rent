@@ -13,7 +13,7 @@ const About = () => {
     <div id='about' className='w-full px-5 flex justify-center items-center py-4'>
       <div className='w-full max-w-screen-xl'>
         <div className='sm:mt-8 xl:mt-10 flex justify-center xl:justify-between items-center xl:items-start'>
-          <div className='hidden lg:block w-full sm:w-[400px] sm:min-w-[400px] sm:h-[400px] mb-8 lg:mb-12 lg:mb-0 lg:mr-12'>
+          <div className='hidden lg:block w-full sm:w-[400px] sm:min-w-[400px] sm:h-[400px] mb-8 lg:mb-12 lg:mr-12'>
             <img className='w-full h-full rounded-[20px] sm:rounded-[250px] border-4 border-green-700 object-cover' src={vuAnh} alt='house' />
           </div>
           <div className='w-full xl:w-7/12 overflow-auto'>
