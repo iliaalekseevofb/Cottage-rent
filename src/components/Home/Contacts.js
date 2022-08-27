@@ -23,32 +23,36 @@ const Contacts = () => {
             </div>
           </div>
           <div className=''>
-            <div>
-              <div className='w-20 h-20 bg-green-600 rounded-full flex justify-center items-center'>
+            <div className='w-full flex justify-start items-start mb-6'>
+              <div className='w-20 h-20 mr-6 bg-green-600 rounded-full flex justify-center items-center'>
                 <ImLocation2 className='text-white' size={32} />
               </div>
-              <div>
-                <h2></h2>
-                <p></p>
+              <div className='w-2/3'>
+                <h2 className='text-xl font-semibold pb-2'>Адрес</h2>
+                <p className='font-serif text-neutral-500'>Загородная база отдыха «Домик у Барта» расположена в живописном поселке "Мирный" на 101-ом километре Каширского шоссе.	</p>
               </div>
             </div>
-            <div>
-              <div></div>
-              <div>
-                <h2></h2>
-                <p></p>
+            <div className='w-full flex justify-start items-start'>
+              <div className='w-20 h-20 mr-6 bg-green-600 rounded-full flex justify-center items-center'>
+                <FaEnvelope className='text-white' size={32} />
+              </div>
+              <div className='w-2/3'>
+                <h2 className='text-xl font-semibold pb-2'>E-mail</h2>
+                <p className='font-serif text-neutral-500'>support@domik-u-barta</p>
               </div>
             </div>
           </div>
-          <div className=''>
-            <div></div>
+          <div className='w-full flex justify-start items-start'>
+            <div className='w-20 h-20 mr-6 bg-green-600 rounded-full flex justify-center items-center'>
+              <BsFillTelephoneFill className='text-white' size={32} />
+            </div>
             <div>
-              <h2></h2>
-              <p></p>
+              <h2 className='text-xl font-semibold pb-2'>Телефоны</h2>
+              <p className='font-serif text-neutral-500'>+ 7 (987) 654-32-10</p>
+              <p className='font-serif text-neutral-500'>+ 7 (123) 456-78-90</p>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   )

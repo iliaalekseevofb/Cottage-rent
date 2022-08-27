@@ -52,7 +52,7 @@ const ImageSlider = () => {
             </div>
             <div className='absolute z-20 top-[16%] sm:top-[24%] lg:top-[20%] xl:top-[28%] left-[15%]'>
               <h1 className='text-white font-sans text-xl esm:text-2xl sm:text-3xl lg:text-5xl font-semibold'>{headers[slideIndex-1]}</h1>
-              <h3 className='my-3 esm:my-5 lg:my-10 max-w-[260px] esm:max-w-[320px] sm:max-w-[480px] lg:max-w-[680px] text-white font-serif text-sm esm:text-md sm:text-xl lg:text-2xl'>{texts[slideIndex-1]}</h3>
+              <h3 className='my-3 esm:my-5 lg:my-8 max-w-[260px] esm:max-w-[320px] sm:max-w-[480px] lg:max-w-[680px] text-white font-serif text-sm esm:text-md sm:text-xl lg:text-2xl'>{texts[slideIndex-1]}</h3>
               <button className='hidden esm:block w-28 esm:w-36 lg:w-48 h-10 esm:h-12 lg:h-16 text-white text-base esm:text-md lg:text-xl rounded-md bg-orange-400 hover:brightness-75 duration-200'>Подробнее</button>
             </div>
           </div>
